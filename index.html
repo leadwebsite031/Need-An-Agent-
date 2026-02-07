@@ -3,184 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elite Property Group | Senior Agent Portfolio</title>
+    <title>Michael Karam | Real Estate Expert</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         .tab-content { display: none; }
-        .tab-content.active { display: block; }
+        .tab-content.active { display: block; animation: fadeIn 0.4s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         .nav-link.active { border-bottom: 2px solid #b45309; color: #b45309; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans">
 
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20 items-center">
-                <div class="flex items-center gap-2">
-                    <i data-lucide="home" class="text-amber-700"></i>
-                    <span class="text-2xl font-bold tracking-tight text-slate-800">ELITE<span class="text-amber-700">ESTATES</span></span>
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 h-20 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="bg-amber-700 text-white p-2 rounded-lg font-bold text-xl leading-none">MK</div>
+                <div>
+                    <span class="block text-xl font-bold leading-none">MICHAEL KARAM</span>
+                    <span class="text-[10px] tracking-widest text-slate-500 uppercase font-bold leading-none">Real Estate Specialist</span>
                 </div>
-                <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
-                    <button onclick="showTab('home')" class="nav-link active px-2 py-1">Home</button>
-                    <button onclick="showTab('buy')" class="nav-link px-2 py-1">Buy</button>
-                    <button onclick="showTab('sell')" class="nav-link px-2 py-1">Sell</button>
-                    <button onclick="showTab('about')" class="nav-link px-2 py-1">About</button>
-                    <button onclick="showTab('contact')" class="nav-link px-2 py-1 bg-amber-700 text-white rounded-md !border-none px-4 hover:bg-amber-800 transition">Get Started</button>
-                </div>
+            </div>
+            <div class="hidden md:flex space-x-6 text-sm font-bold uppercase tracking-wider">
+                <button onclick="showTab('home')" class="nav-link active px-2">Home</button>
+                <button onclick="showTab('buy')" class="nav-link px-2">Buy</button>
+                <button onclick="showTab('sell')" class="nav-link px-2">Sell</button>
+                <button onclick="showTab('about')" class="nav-link px-2">About</button>
+                <button onclick="showTab('contact')" class="bg-amber-700 text-white px-5 py-2 rounded-full hover:bg-amber-800 transition">Get Started</button>
             </div>
         </div>
     </nav>
 
     <main id="home" class="tab-content active">
-        <section class="relative h-[80vh] flex items-center justify-center bg-slate-900 text-white">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6199f7339f?auto=format&fit=crop&w=1920&q=80" class="absolute inset-0 w-full h-full object-cover opacity-40">
-            <div class="relative z-10 text-center px-4">
-                <h1 class="text-5xl md:text-7xl font-light mb-6">Elevated Living. <br><span class="font-bold">Expertly Managed.</span></h1>
-                <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">The gold standard in property acquisition and portfolio management for the discerning investor.</p>
-                <button onclick="showTab('buy')" class="bg-amber-700 hover:bg-amber-800 text-white px-10 py-4 rounded-full font-bold transition transform hover:scale-105">View Listings</button>
+        <div class="relative h-[85vh] flex items-center bg-slate-900 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80" class="absolute inset-0 w-full h-full object-cover opacity-50">
+            <div class="relative z-10 max-w-7xl mx-auto px-6">
+                <h1 class="text-6xl font-bold text-white mb-4">Securing Your <br><span class="text-amber-500 underline underline-offset-8">Property Future</span>.</h1>
+                <p class="text-xl text-slate-200 mb-8 max-w-xl">Connecting motivated buyers with premium residential and commercial assets in Pinetown and Westville.</p>
+                <div class="flex gap-4">
+                    <button onclick="showTab('buy')" class="bg-amber-700 text-white px-8 py-4 rounded-lg font-bold shadow-xl hover:bg-amber-800 transition">Browse Properties</button>
+                    <button onclick="showTab('contact')" class="bg-white text-slate-900 px-8 py-4 rounded-lg font-bold shadow-xl hover:bg-slate-100 transition">Request Valuation</button>
+                </div>
             </div>
-        </section>
+        </div>
     </main>
 
-    <main id="buy" class="tab-content py-20 px-4">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-bold mb-10 text-center">Exclusive Listings</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80" class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">The Glass Villa</h3>
-                        <p class="text-slate-500 mb-4">Camps Bay, Cape Town</p>
-                        <div class="flex justify-between font-bold text-amber-700">
-                            <span>R 14,500,000</span>
-                            <span class="text-slate-800">4 Bed | 4 Bath</span>
-                        </div>
+    <main id="buy" class="tab-content py-16 px-6">
+        <div class="max-w-7xl mx-auto text-center mb-12">
+            <h2 class="text-4xl font-bold">Current Listings</h2>
+            <p class="text-slate-500 mt-2">Verified properties available for acquisition.</p>
+        </div>
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-100">
+                <img src="https://images.unsplash.com/photo-1512915922686-57c11dde9b6b?auto=format&fit=crop&w=800" class="h-56 w-full object-cover">
+                <div class="p-6">
+                    <span class="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded">JUST LISTED</span>
+                    <h3 class="text-xl font-bold mt-2">Dawncliffe Townhouse</h3>
+                    <p class="text-slate-500 text-sm italic">Westville, KZN</p>
+                    <div class="flex items-center gap-4 my-4 text-slate-600 text-sm">
+                        <span class="flex items-center gap-1"><i data-lucide="bed" class="w-4"></i> 3 Bed</span>
+                        <span class="flex items-center gap-1"><i data-lucide="bath" class="w-4"></i> 2.5 Bath</span>
                     </div>
+                    <div class="text-2xl font-black text-amber-700">R 2,595,000</div>
+                    <button onclick="showTab('contact')" class="w-full mt-4 border border-slate-900 py-2 rounded font-bold hover:bg-slate-900 hover:text-white transition">Inquire Now</button>
                 </div>
+            </div>
+
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-100">
+                <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=800" class="h-56 w-full object-cover">
+                <div class="p-6">
+                    <span class="bg-blue-100 text-blue-700 text-xs font-bold px-2 py-1 rounded">INVESTMENT</span>
+                    <h3 class="text-xl font-bold mt-2">High Street Mews</h3>
+                    <p class="text-slate-500 text-sm italic">The Wolds, Pinetown</p>
+                    <div class="flex items-center gap-4 my-4 text-slate-600 text-sm">
+                        <span class="flex items-center gap-1"><i data-lucide="bed" class="w-4"></i> 2 Bed</span>
+                        <span class="flex items-center gap-1"><i data-lucide="bath" class="w-4"></i> 1 Bath</span>
+                    </div>
+                    <div class="text-2xl font-black text-amber-700">R 995,000</div>
+                    <button onclick="showTab('contact')" class="w-full mt-4 border border-slate-900 py-2 rounded font-bold hover:bg-slate-900 hover:text-white transition">Inquire Now</button>
                 </div>
+            </div>
+
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-100">
+                <img src="https://images.unsplash.com/photo-1574362848149-11496d93a7c7?auto=format&fit=crop&w=800" class="h-56 w-full object-cover">
+                <div class="p-6">
+                    <span class="bg-amber-100 text-amber-700 text-xs font-bold px-2 py-1 rounded">COMMERCIAL</span>
+                    <h3 class="text-xl font-bold mt-2">Multi-Tenanted Asset</h3>
+                    <p class="text-slate-500 text-sm italic">Pinetown Central</p>
+                    <div class="flex items-center gap-4 my-4 text-slate-600 text-sm">
+                        <span class="flex items-center gap-1"><i data-lucide="layout" class="w-4"></i> 2987 m²</span>
+                        <span class="flex items-center gap-1"><i data-lucide="trending-up" class="w-4"></i> R62k PM Income</span>
+                    </div>
+                    <div class="text-2xl font-black text-amber-700">R 4,490,000</div>
+                    <button onclick="showTab('contact')" class="w-full mt-4 border border-slate-900 py-2 rounded font-bold hover:bg-slate-900 hover:text-white transition">Inquire Now</button>
+                </div>
+            </div>
         </div>
     </main>
 
-    <main id="sell" class="tab-content py-20 bg-slate-100 px-4 text-center">
+    <main id="sell" class="tab-content py-24 px-6 bg-slate-100 text-center">
         <div class="max-w-3xl mx-auto">
-            <i data-lucide="trending-up" class="mx-auto w-16 h-16 text-amber-700 mb-6"></i>
-            <h2 class="text-4xl font-bold mb-6">List Your Property</h2>
-            <p class="text-xl text-slate-600 mb-8">We use data-driven marketing and a global network of high-net-worth individuals to sell your property at the highest price point.</p>
-            <button onclick="showTab('contact')" class="bg-slate-900 text-white px-10 py-4 rounded-lg font-bold">Request a Valuation</button>
-        </div>
-    </main>
-
-    <main id="about" class="tab-content py-20 px-4">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-center">
-            <div class="w-full md:w-1/2">
-                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" class="rounded-2xl shadow-2xl">
-            </div>
-            <div class="w-full md:w-1/2">
-                <h2 class="text-4xl font-bold mb-6">Meet Your Senior Partner</h2>
-                <p class="text-slate-600 mb-6 leading-relaxed">With over 15 years in high-end real estate, I specialize in navigating complex transactions with discretion and precision. My goal isn't just to find you a house, but to secure your next legacy asset.</p>
-                <ul class="space-y-4 font-semibold">
-                    <li class="flex items-center gap-3 text-amber-700"><i data-lucide="check-circle"></i> R2 Billion+ in Closed Transactions</li>
-                    <li class="flex items-center gap-3 text-amber-700"><i data-lucide="check-circle"></i> Expert Market Analysis</li>
-                    <li class="flex items-center gap-3 text-amber-700"><i data-lucide="check-circle"></i> POPI Act Compliant Data Handling</li>
-                </ul>
+            <h2 class="text-4xl font-bold mb-6 italic">"Real Estate Is About Relationships, Not Commissions."</h2>
+            <p class="text-xl text-slate-600 mb-8 leading-relaxed">Michael Karam leverages 8+ years of commercial and residential expertise to position your home for a record-breaking sale.</p>
+            <div class="grid md:grid-cols-3 gap-6 text-left">
+                <div class="bg-white p-6 rounded-xl border-l-4 border-amber-700 shadow-sm">
+                    <h4 class="font-bold">Market Analysis</h4>
+                    <p class="text-xs text-slate-500">Accurate valuation using Property24 data trends.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border-l-4 border-amber-700 shadow-sm">
+                    <h4 class="font-bold">Premium Photos</h4>
+                    <p class="text-xs text-slate-500">Professional staging and high-end visual marketing.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border-l-4 border-amber-700 shadow-sm">
+                    <h4 class="font-bold">Global Reach</h4>
+                    <p class="text-xs text-slate-500">Listed across P24, Private Property, and Socials.</p>
+                </div>
             </div>
         </div>
     </main>
 
-    <main id="contact" class="tab-content py-20 px-4 bg-white">
-        <div class="max-w-2xl mx-auto bg-slate-50 p-8 md:p-12 rounded-3xl shadow-sm border border-slate-100">
-            <h2 class="text-3xl font-bold mb-2">Client Pre-Qualification</h2>
-            <p class="text-slate-500 mb-8">Please complete this screening so we can provide the best service.</p>
+    <main id="about" class="tab-content py-16 px-6">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row gap-12 items-center">
+            <div class="w-full md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=800" class="rounded-3xl grayscale shadow-2xl">
+            </div>
+            <div class="w-full md:w-1/2">
+                <h2 class="text-4xl font-bold mb-4 italic">Michael Karam</h2>
+                <p class="text-slate-600 mb-6 font-medium">Sales & Letting Specialist | Real Estate Company</p>
+                <p class="text-slate-600 mb-6 leading-relaxed">
+                    With over 8 years of specialized experience in both commercial/industrial and residential sectors, Michael offers a unique edge. Having witnessed numerous market shifts, he brings a deep understanding of property valuations and high-level negotiation strategies to the Pinetown and Upper Highway areas.
+                </p>
+                <div class="space-y-3">
+                    <div class="flex items-center gap-4 text-slate-700"><i data-lucide="award" class="text-amber-700"></i> Top-Performing Area Agent</div>
+                    <div class="flex items-center gap-4 text-slate-700"><i data-lucide="check-square" class="text-amber-700"></i> NQF Real Estate Accredited</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <main id="contact" class="tab-content py-20 px-6 bg-white">
+        <div class="max-w-2xl mx-auto border p-10 rounded-3xl shadow-2xl">
+            <h2 class="text-3xl font-black mb-2">Secure Consultation</h2>
+            <p class="text-slate-500 mb-8">Screening is required for priority viewings.</p>
             
             <form id="screeningForm" class="space-y-6">
-                <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm font-bold uppercase mb-2">Full Name</label>
+                    <input type="text" id="name" required class="w-full p-4 rounded-xl border-2 focus:border-amber-700 outline-none">
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
                     <div>
-                        <label class="block text-sm font-bold mb-2">Full Name</label>
-                        <input type="text" id="name" required class="w-full p-3 rounded-lg border border-slate-300">
+                        <label class="block text-sm font-bold uppercase mb-2">Budget Range</label>
+                        <select id="budget" class="w-full p-4 rounded-xl border-2 bg-white outline-none">
+                            <option>Under R1,000,000</option>
+                            <option>R1,000,000 - R3,000,000</option>
+                            <option>R3,000,000+</option>
+                        </select>
                     </div>
                     <div>
-                        <label class="block text-sm font-bold mb-2">Phone / WhatsApp</label>
-                        <input type="tel" id="phone" required placeholder="+27..." class="w-full p-3 rounded-lg border border-slate-300">
+                        <label class="block text-sm font-bold uppercase mb-2">Buying Status</label>
+                        <select id="status" class="w-full p-4 rounded-xl border-2 bg-white outline-none">
+                            <option>Bond Pre-Approved</option>
+                            <option>Cash Buyer</option>
+                            <option>Need Pre-Approval</option>
+                        </select>
                     </div>
                 </div>
 
-                <div>
-                    <label class="block text-sm font-bold mb-2">Budget Range</label>
-                    <select id="budget" class="w-full p-3 rounded-lg border border-slate-300">
-                        <option>R 2M - R 5M</option>
-                        <option>R 5M - R 15M</option>
-                        <option>R 15M+</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label class="block text-sm font-bold mb-2">Financing Status</label>
-                    <select id="finance" class="w-full p-3 rounded-lg border border-slate-300">
-                        <option>Pre-Approved Bond</option>
-                        <option>Cash Buyer</option>
-                        <option>Need Financing Assistance</option>
-                    </select>
-                </div>
-
-                <div class="bg-amber-50 p-4 rounded-lg border border-amber-100">
-                    <div class="flex items-start gap-3">
-                        <input type="checkbox" id="popi" required class="mt-1 h-4 w-4 text-amber-700">
-                        <label for="popi" class="text-xs text-slate-700 leading-snug">
-                            I hereby consent to the processing of my personal data in accordance with the <strong>POPI Act</strong>. Elite Estates will only use this information to contact me regarding property services and will not share it with third parties.
+                <div class="bg-amber-50 p-6 rounded-xl border border-amber-200">
+                    <div class="flex gap-4 items-start">
+                        <input type="checkbox" id="popiConsent" required class="mt-1 h-5 w-5 accent-amber-700">
+                        <label for="popiConsent" class="text-sm text-slate-700 leading-relaxed">
+                            <strong>POPI Act Consent:</strong> I agree that my details will be used by Michael Karam (Real Estate Company) solely for the purpose of property assistance. Your data is never sold to third parties.
                         </label>
                     </div>
                 </div>
 
-                <button type="submit" class="w-full bg-slate-900 text-white py-4 rounded-lg font-bold hover:bg-slate-800 flex justify-center items-center gap-2">
-                    Submit & Open WhatsApp <i data-lucide="external-link"></i>
+                <button type="submit" class="w-full bg-slate-900 text-white py-5 rounded-2xl font-black text-xl hover:bg-slate-800 transition transform hover:scale-[1.02]">
+                    SUBMIT & START WHATSAPP
                 </button>
             </form>
         </div>
     </main>
 
-    <footer class="bg-slate-900 text-slate-400 py-10 text-center text-sm">
-        <p>&copy; 2026 Elite Estates. All rights reserved. POPI Compliant Brokerage.</p>
+    <footer class="bg-slate-900 text-slate-500 py-12 text-center text-sm">
+        <p>© 2026 Michael Karam | Real Estate Company. Hillcrest, Pinetown, Westville.</p>
+        <p class="mt-2 uppercase tracking-widest font-bold">POPI Compliant Brokerage</p>
     </footer>
 
-    <a href="https://wa.me/YOUR_NUMBER" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition z-[100]">
-        <i data-lucide="message-circle"></i>
-    </a>
-
     <script>
-        // Initialize Icons
         lucide.createIcons();
 
-        // Tab Switching Logic
         function showTab(tabId) {
-            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
-            document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
-            
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
             document.getElementById(tabId).classList.add('active');
-            event.target.classList.add('active');
-            window.scrollTo(0,0);
+            
+            // Highlight nav link
+            const links = document.querySelectorAll('.nav-link');
+            links.forEach(l => {
+                if(l.innerText.toLowerCase() === tabId) l.classList.add('active');
+            });
         }
 
-        // WhatsApp Integration Logic
         document.getElementById('screeningForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
             const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
             const budget = document.getElementById('budget').value;
-            const finance = document.getElementById('finance').value;
+            const status = document.getElementById('status').value;
             
-            // Your Business WhatsApp Number
-            const agentWhatsApp = "27674099143"; // REPLACE WITH YOUR NUMBER
+            // Michael Karam's Business Routing (Replace with specific mobile if different)
+            const agentPhone = "27746272667"; 
             
-            const message = `*New Lead Screening*%0A` +
-                            `*Name:* ${name}%0A` +
-                            `*Phone:* ${phone}%0A` +
-                            `*Budget:* ${budget}%0A` +
-                            `*Status:* ${finance}%0A` +
-                            `*POPI Consent:* Verified`;
+            const text = `*New Lead Screening - Michael Karam*%0A%0A` +
+                         `*Name:* ${name}%0A` +
+                         `*Budget:* ${budget}%0A` +
+                         `*Financing:* ${status}%0A` +
+                         `*POPI Consent:* Granted`;
             
-            window.open(`https://wa.me/${agentWhatsApp}?text=${message}`, '_blank');
+            window.open(`https://wa.me/${agentPhone}?text=${text}`, '_blank');
         });
     </script>
 </body>
